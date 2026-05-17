@@ -66,3 +66,13 @@ Open the notebook in Colab and run all cells. The agent will:
 5. Record video episodes periodically
 
 Checkpoints store the full agent state (network weights, optimizer states, obs normalization statistics) and training can be resumed automatically if a checkpoint is found at the save path.
+
+## Limitations
+
+- **Single random seed**: Experiments were conducted with only one random seed (`seed=42`). Since reinforcement learning can be highly sensitive to initialization and stochastic exploration, results may vary across different seeds.
+
+- **Limited hyperparameter search**: Hyperparameters were not optimized through a systematic search. Most values were based on the original SAC implementation and adjusted experimentally.
+
+- **Lower stability in the hardcore environment**: Performance in `BipedalWalker-Hardcore` was less stable than in the standard environment. The hardcore environment contains obstacles such as stairs, gaps, and stumps, making the task significantly harder.
+
+- **Environment-specific design still needed**: The gap between the standard environment and hardcore environment suggests that stronger exploration methods or more environment-specific training strategies may be required.
