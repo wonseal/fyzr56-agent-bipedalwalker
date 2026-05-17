@@ -76,3 +76,11 @@ Checkpoints store the full agent state (network weights, optimizer states, obs n
 - **Lower stability in the hardcore environment**: Performance in `BipedalWalker-Hardcore` was less stable than in the standard environment. The hardcore environment contains obstacles such as stairs, gaps, and stumps, making the task significantly harder.
 
 - **Environment-specific design still needed**: The gap between the standard environment and hardcore environment suggests that stronger exploration methods or more environment-specific training strategies may be required.
+
+## Future Work
+
+- Run experiments with multiple random seeds to evaluate robustness.
+- Conduct a more systematic hyperparameter search.
+- Test Prioritized Experience Replay to sample more informative transitions.
+- Add curiosity-driven exploration for the hardcore environment.
+- Compare SAC against other algorithms such as TD3 or REDQ.
